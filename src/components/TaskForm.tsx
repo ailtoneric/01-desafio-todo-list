@@ -1,10 +1,16 @@
 import styles from './TaskForm.module.css';	
+import { PlusCircle } from '@phosphor-icons/react';
 
 export default function TaskForm() {
     return (
-        <form className={styles.form}>
-            <input type="text" />
-            <button>Submit</button>
-        </form>
+        <div className={styles.form}>
+            <form>
+                <input type="text" placeholder="Adicione uma nova tarefa" />
+                <button>
+                    Criar
+                    <PlusCircle size={16} weight="bold" />
+                </button>
+            </form>
+        </div>
     )
 }

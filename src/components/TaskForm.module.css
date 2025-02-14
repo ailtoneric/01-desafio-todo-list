@@ -21,6 +21,10 @@ form {
     }
 
     button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
         width: 5.625rem;
         height: 3.25rem;
         background: var(--blue-dark);
