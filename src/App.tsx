@@ -1,8 +1,22 @@
+import { useState } from 'react';
 import styles from './App.module.css';
 import Header from './components/Header';
 import TaskForm from './components/TaskForm';
+import TaskHeader from './components/TaskHeader';
+import NoTask from './components/NoTask';
+import Task from './components/Task';
+
+export interface ITask {
+  id: number;
+  name: string;
+  isCompleted: boolean;
+}
 
 function App() {
+  const [tasks, setTasks] = useState([
+    {id: 1, name: 'Ailton', isCompleted: false},
+    {id: 1, name: 'Ailton', isCompleted: true},
+  ] as ITask[]);
 
   return (
     <div>
@@ -10,17 +24,24 @@ function App() {
       <main className={styles.container}>
         <TaskForm />
         <section className={styles.tasks}>
-            <div className={styles.taskHeader}>
-                <span>Tarefas criadas <span className="task-count">5</span></span>
-                <span>Concluídas <span className="completed-count">2 de 5</span></span>
-            </div>
-            <ul className="task-list">
-                <li className="task">
-                    <input type="checkbox" />
-                    <span>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</span>
-                    <button className="delete-task">🗑️</button>
-                </li>
-            </ul>
+            <TaskHeader />
+            { 
+              tasks.length === 0 ? <NoTask /> : 
+              (
+                <div className={styles.taskList}>
+                  {tasks.map(
+                    (task) => (
+                      <Task 
+                        key={task.id}
+                        id={task.id}
+                        name={task.name}
+                        isCompleted={task.isCompleted}
+                      />
+                    )
+                  )}
+                </div>
+              )
+            }
         </section>
       </main>
     </div>
