@@ -1,10 +1,10 @@
-import styles from './Header.module.css';
-import logo from '../assets/logo.svg';
+import styles from './Header.module.css'
+import Logo from './../assets/logo.svg'
 
-export default function Header() {
+export function Header() {
   return (
-    <header className={styles.header}>
-        <img src={logo} alt="logo" />
+    <header className={styles.container}>
+      <img src={Logo} alt="logo da aplicação" />
     </header>
   )
 }
