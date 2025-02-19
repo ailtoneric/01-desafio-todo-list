@@ -9,9 +9,10 @@ import { Input } from './components/Input'
 import { Empty } from './components/List/Empty'
 import { Header as ListHeader } from './components/List/Header'
 import { Item } from './components/List/Item'
+import { v4 as uuidv4 } from 'uuid'
 
 export interface ITask {
-  id: number
+  id: string
   text: string
   isChecked: boolean
 }
@@ -34,7 +35,7 @@ export default function App() {
     }
 
     const newTask: ITask = {
-      id: new Date().getTime(),
+      id: uuidv4(),
       text: inputValue,
       isChecked: false,
     }
@@ -43,7 +44,7 @@ export default function App() {
     setInputValue('')
   }
 
-  function handleRemoveTask(id: number) {
+  function handleRemoveTask(id: string) {
     const filteredTasks = tasks.filter((task) => task.id !== id)
 
     if (!confirm('Deseja mesmo apagar essa tarefa?')) {
@@ -53,7 +54,7 @@ export default function App() {
     setTasks(filteredTasks)
   }
 
-  function handleToggleTask({ id, value }: { id: number; value: boolean }) {
+  function handleToggleTask({ id, value }: { id: string; value: boolean }) {
     const updatedTasks = tasks.map((task) => {
       if (task.id === id) {
         return { ...task, isChecked: value }

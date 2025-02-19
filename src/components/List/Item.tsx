@@ -6,8 +6,8 @@ import styles from './Item.module.css'
 
 interface Props {
   data: ITask
-  removeTask: (id: number) => void
-  toggleTaskStatus: ({ id, value }: { id: number; value: boolean }) => void
+  removeTask: (id: string) => void
+  toggleTaskStatus: ({ id, value }: { id: string; value: boolean }) => void
 }
 
 export function Item({ data, removeTask, toggleTaskStatus }: Props) {
