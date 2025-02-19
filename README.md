@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+<a id="readme-top"></a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/ailtoneric/01-desafio-todo-list">
+    <img src="https://github.com/ailtoneric.png" alt="Logo" width="80" height="80">
+  </a>
 
-Currently, two official plugins are available:
+  <h3 align="center">Desafio 01 de React JS</h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <p align="center">
+    Criei uma todo list em React como desafio da trilha Ignite React da Rocketseat utilizando o Vite para aprender sobre os conceitos mais importantes do React, entre eles estão componentização, propriedades, estados, imutabilidade e hooks. Além de aplicar o TypeScript para adicionar tipagem estática ã aplicação.
+  </p>
+</div>
 
-## Expanding the ESLint configuration
+<img alt="ecoleta" src="https://repository-images.githubusercontent.com/932790053/ebd107a2-4bc4-4f13-ace4-750ecc62fa2e" />
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Sobre o projeto
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Estou desenvolvendo o primeiro desafio do Ignite, um projeto em React.js para aprender e aplicar os principais fundamentos dessa biblioteca. Durante o processo, vou trabalhar com conceitos essenciais como componentes, propriedades, estado e imutabilidade, além de explorar tópicos mais avançados, como React Hooks, fluxo de renderização, estilização e TypeScript dentro do React.
+
+O projeto se trata de uma todo list, onde será possível adicionar tarefas, marcar como concluidas e remover.
+
+Agora é só partir para o código! 🚀
+
+
+
+## Como testar
+
+Siga as etapas abaixo para simular o projeto em seu ambiente local.
+
+
+
+### Instalação
+
+1. Clonar o repositório do github
+   ```sh
+   gh repo clone ailtoneric/01-desafio-todo-list
+   ```
+2. Instalar os pacotes da NPM
+   ```sh
+   npm install
+   ```
+3. Execute o servidor local
+   ```sh
+   npm run dev
+   ```
